@@ -5,11 +5,17 @@ using UnityEngine;
 public class TurnTimer : MonoBehaviour
 {
 	public float currentTime = 0;
-	public float timerSpeed = 2;
+	public float timerSpeed = 0.5f;
 
 	private bool _nextTurn = false;
 
 	[SerializeField] private Bar _timerBar;
+
+	//bool myVar = IsNextTurn();
+	public bool IsNextTurn()
+	{
+		return _nextTurn;
+	}
 
 	public void ResetTimer()
 	{

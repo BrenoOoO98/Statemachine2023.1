@@ -4,13 +4,16 @@ using UnityEngine;
 
 public abstract class PlayerAbility : MonoBehaviour
 {
-	[SerializeField] TurnTimer _turnTimer;
+	[SerializeField]
+	protected TurnTimer _turnTimer;
+	[SerializeField]
+	protected Enemy _enemy;
 
 	public abstract void UseAbility();
 
 	protected void EndTurn()
 	{
-		if(_turnTimer != null)
+		if (_turnTimer !=null)
 		{
 			_turnTimer.ResetTimer();
 		}
